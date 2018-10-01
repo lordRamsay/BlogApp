@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title> BlogHub </title>
+    <meta charset = "utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel = "stylesheet" type = "text/css" href="/public/css/swiper.min.css" />
+    <link rel = "stylesheet" type = "text/css" href="/public/css/style.css" />
+  </head>
+  <body>
+    <% include ./sub_templates/header %>
+
+    <!-- trending blogs -->
+    <div class = "heading">
+      <h3>Trending Blogs</h3>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(/public/images/user-01.jpg)" >
+          <div class = "trending-title">
+            Fashion
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(/public/images/user-02.jpg)">
+          <div class = "trending-title">
+            Adventure
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(/public/images/user-03.jpg)">
+          <div class = "trending-title">
+            Lifestyle
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(/public/images/user-04.jpg)">
+          <div class = "trending-title">
+            Travel
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(/public/images/user-05.jpg)">
+          <div class = "trending-title">
+            Food
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- blogs by categories -->
+    <div class = "heading">
+      <h3> Read by Your Choice</h3>
+    </div>
+
+    <div class = "blog-container">
+
+      <div class = "tile">
+        <div class = "pic" style = "background-image : url(/public/images/jump-800.jpg)">
+        </div>
+        <div class = "tile-description">
+          <h3 class = "tile-title"> Title </h3>
+          <p>This Blog with title Title is written by author Author</p>
+          <h3 class = "tile-author">Author</h3>
+        </div>
+      </div>
+
+      <div class = "tile">
+          <div class = "pic" style = "background-image : url(/public/images/fuji-400.jpg)">
+          </div>
+        <div class = "tile-description">
+          <h3 class = "tile-title"> Title </h3>
+          <p>This Blog with title Title is written by author Author</p>
+          <h3 class = "tile-author">Author</h3>
+        </div>
+      </div>
+
+      <div class = "tile">
+        <div class = "pic" style = "background-image : url(/public/images/lamp-800.jpg)">
+        </div>
+        <div class = "tile-description">
+          <h3 class = "tile-title"> Title </h3>
+          <p>This Blog with title Title is written by author Author</p>
+          <h3 class = "tile-author">Author</h3>
+        </div>
+      </div>
+
+      <div class = "tile">
+        <div class = "pic" style = "background-image : url(/public/images/music-400.jpg)">
+        </div>
+        <div class = "tile-description">
+          <h3 class = "tile-title"> Title </h3>
+          <p>This Blog with title Title is written by author Author</p>
+          <h3 class = "tile-author">Author</h3>
+        </div>
+      </div>
+
+    </div>
+
+  <!-- scripts -->
+   <script src = "/public/js/jQuery.js"></script>
+   <script src = "/public/js/swiper.min.js"></script>
+   <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+  </body>
+</html>
